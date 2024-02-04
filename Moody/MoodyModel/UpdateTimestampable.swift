@@ -9,7 +9,7 @@
 
 let UpdateTimestampKey = "updatedAt"
 
-protocol UpdateTimestampable: class {
+protocol UpdateTimestampable: AnyObject {
     var updatedAt: Date { get set }
 }
 

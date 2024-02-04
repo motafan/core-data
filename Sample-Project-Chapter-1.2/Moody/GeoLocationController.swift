@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 
-protocol GeoLocationControllerDelegate: class {
+protocol GeoLocationControllerDelegate: AnyObject {
     func geoLocationDidChangeAuthorizationStatus(authorized: Bool)
 }
 

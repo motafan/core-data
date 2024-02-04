@@ -10,7 +10,7 @@ import CoreData
 import CoreLocation
 
 
-public protocol RemoteObject: class {
+public protocol RemoteObject: AnyObject{
 }
 
 public typealias RemoteRecordID = String

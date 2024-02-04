@@ -30,13 +30,11 @@ private let __registerOnce: () = {
 extension Data {
     public var moodColors: [UIColor]? {
         guard count > 0 && count % 3 == 0 else { return nil }
-        var rgbValues = Array(repeating: UInt8(), count: count)
-        rgbValues.withUnsafeMutableBufferPointer { buffer in
-            let voidPointer = UnsafeMutableRawPointer(buffer.baseAddress)
-            let _ = withUnsafeBytes { bytes in
-                memcpy(voidPointer, bytes, count)
-            }
+        var rgbValues: [UInt8] = []
+        withUnsafeBytes {
+            rgbValues.append(contentsOf: $0)
         }
+        
         let rgbSlices = rgbValues.sliced(size: 3)
         return rgbSlices.map { slice in
             guard let color = UIColor(rawData: slice) else { fatalError("cannot fail since we know tuple is of length 3") }

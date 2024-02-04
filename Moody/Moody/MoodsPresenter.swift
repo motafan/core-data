@@ -8,7 +8,7 @@
 
 import CoreData
 
-protocol MoodsPresenter: class {
+protocol MoodsPresenter: AnyObject {
     var moodSource: MoodSource! { get set }
     var managedObjectContext: NSManagedObjectContext! { get set }
 }

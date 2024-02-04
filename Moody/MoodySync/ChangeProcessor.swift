@@ -38,7 +38,7 @@ protocol ChangeProcessor {
 
 /// The `SyncCoordinator` has a list of *change processors* (`ChangeProcessor`) which do the actual work.
 /// Whenever a change happens the *sync coordinator* passes itself to the *change processors* as a *context* (`ChangeProcessorContext`). This is the part of the sync coordinator that the change processors should have access to.
-protocol ChangeProcessorContext: class {
+protocol ChangeProcessorContext: AnyObject {
 
     /// The managed object context to use
     var context: NSManagedObjectContext { get }

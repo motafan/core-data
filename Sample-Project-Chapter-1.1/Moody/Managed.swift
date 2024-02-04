@@ -9,7 +9,7 @@
 import CoreData
 
 
-protocol Managed: class, NSFetchRequestResult {
+protocol Managed: AnyObject, NSFetchRequestResult {
     static var entityName: String { get }
     static var defaultSortDescriptors: [NSSortDescriptor] { get }
 }

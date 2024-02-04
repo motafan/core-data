@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-protocol TableViewDataSourceDelegate: class {
+protocol TableViewDataSourceDelegate: AnyObject {
     associatedtype Object
     associatedtype Cell: UITableViewCell
     func configure(_ cell: Cell, for object: Object)
@@ -123,6 +123,8 @@ class TableViewDataSource<Result: NSFetchRequestResult, Delegate: TableViewDataS
         case .delete:
             guard let indexPath = indexPath else { fatalError("Index path should be not nil") }
             tableView.deleteRows(at: [indexPath], with: .fade)
+        @unknown default:
+            fatalError()
         }
     }
 

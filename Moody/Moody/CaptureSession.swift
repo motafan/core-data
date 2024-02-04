@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-protocol CaptureSessionDelegate: class {
+protocol CaptureSessionDelegate: AnyObject {
     func captureSessionDidChangeAuthorizationStatus(authorized: Bool)
     func captureSessionDidCapture(_ image: UIImage?)
 }

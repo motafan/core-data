@@ -12,7 +12,7 @@ import CoreDataHelpers
 
 private let MarkedForRemoteDeletionKey = "markedForRemoteDeletion"
 
-public protocol RemoteDeletable: class {
+public protocol RemoteDeletable: AnyObject {
     var changedForRemoteDeletion: Bool { get }
     var markedForRemoteDeletion: Bool { get set }
     func markForRemoteDeletion()

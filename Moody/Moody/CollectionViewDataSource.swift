@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-protocol CollectionViewDataSourceDelegate: class {
+protocol CollectionViewDataSourceDelegate: AnyObject {
     associatedtype Object: NSFetchRequestResult
     associatedtype Cell: UICollectionViewCell
     func configure(_ cell: Cell, for object: Object)
@@ -115,6 +115,8 @@ class CollectionViewDataSource<Delegate: CollectionViewDataSourceDelegate>: NSOb
         case .delete:
             guard let indexPath = indexPath else { fatalError("Index path should be not nil") }
             updates.append(.delete(indexPath))
+        @unknown default:
+            fatalError()
         }
     }
 

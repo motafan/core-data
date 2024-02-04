@@ -11,7 +11,7 @@ import CoreDataHelpers
 
 private let ubiquityToken: String = {
     guard let token = FileManager.default.ubiquityIdentityToken else { return "unknown" }
-    let string = NSKeyedArchiver.archivedData(withRootObject: token).base64EncodedString(options: [])
+    let string = try! NSKeyedArchiver.archivedData(withRootObject: token, requiringSecureCoding: true).base64EncodedString()
     return string.removingCharacters(in: CharacterSet.letters.inverted)
 }()
 private let storeURL = URL.documents.appendingPathComponent("\(ubiquityToken).moody")

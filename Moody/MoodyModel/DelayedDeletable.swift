@@ -12,7 +12,7 @@ import CoreData
 
 private let MarkedForDeletionDateKey = "markedForDeletionDate"
 
-public protocol DelayedDeletable: class {
+public protocol DelayedDeletable: AnyObject {
     var changedForDelayedDeletion: Bool { get }
     var markedForDeletionDate: Date? { get set }
     func markForLocalDeletion()

@@ -11,7 +11,7 @@ import CoreDataHelpers
 import CloudKit
 
 
-public protocol UserOwnable: class {
+public protocol UserOwnable: AnyObject {
     var creatorID: String? { get }
     var belongsToCurrentUser: Bool { get }
     static func predicateForOwnedByUser(withIdentifier identifier: String?) -> NSPredicate
