@@ -19,7 +19,7 @@ final class MigrationsTests: XCTestCase {
         super.setUp()
         registerValueTransformers()
         targetURL = URL.temporary
-        print("Destination URL: \(targetURL)")
+        print("Destination URL: \(targetURL!)")
     }
 
     override func tearDown() {

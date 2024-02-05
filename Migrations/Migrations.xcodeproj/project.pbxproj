@@ -31,7 +31,6 @@
 		17F4C1371BBF09EE007A2AF6 /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1331BBF09EE007A2AF6 /* ValueTransformer.swift */; };
 		17F4C1391BBF12D0007A2AF6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1381BBF12CF007A2AF6 /* TestHelpers.swift */; };
 		17F4C13E1BBFD768007A2AF6 /* V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C13D1BBFD768007A2AF6 /* V2.swift */; };
-		17F4C1411BC13CF9007A2AF6 /* Moody 2-Moody 3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1401BC13CF9007A2AF6 /* Moody 2-Moody 3.xcmappingmodel */; };
 		17F4C1451BC14899007A2AF6 /* Moody 2.moody in Resources */ = {isa = PBXBuildFile; fileRef = 17F4C1421BC14899007A2AF6 /* Moody 2.moody */; };
 		17F4C1461BC14899007A2AF6 /* Moody 2.moody-shm in Resources */ = {isa = PBXBuildFile; fileRef = 17F4C1431BC14899007A2AF6 /* Moody 2.moody-shm */; };
 		17F4C1471BC14899007A2AF6 /* Moody 2.moody-wal in Resources */ = {isa = PBXBuildFile; fileRef = 17F4C1441BC14899007A2AF6 /* Moody 2.moody-wal */; };
@@ -46,6 +45,7 @@
 		17F4C1631BC2AAF1007A2AF6 /* Moody 4.moody-wal in Resources */ = {isa = PBXBuildFile; fileRef = 17F4C1601BC2AAF1007A2AF6 /* Moody 4.moody-wal */; };
 		17F4C1661BC2ABC9007A2AF6 /* Moody 4-Moody 5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1651BC2ABC9007A2AF6 /* Moody 4-Moody 5.xcmappingmodel */; };
 		17F4C1681BC2AC8A007A2AF6 /* V5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1671BC2AC8A007A2AF6 /* V5.swift */; };
+		26084A9A2B6F82CD00B84F88 /* Moody 2-Moody 3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 17F4C1401BC13CF9007A2AF6 /* Moody 2-Moody 3.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,7 +279,7 @@
 					};
 					17F4C0FC1BBE8E19007A2AF6 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1520;
 						TestTargetID = 17F4C0E81BBE8E19007A2AF6;
 					};
 				};
@@ -342,9 +342,9 @@
 			files = (
 				174F83481BC41D8100B53393 /* NSPersistentStoreCoordinator+Extensions.swift in Sources */,
 				17F4C1351BBF09EE007A2AF6 /* NSManagedObjectContext+Extensions.swift in Sources */,
+				26084A9A2B6F82CD00B84F88 /* Moody 2-Moody 3.xcmappingmodel in Sources */,
 				17F4C12C1BBE91F6007A2AF6 /* Moody.xcdatamodeld in Sources */,
 				17F4C1341BBF09EE007A2AF6 /* Managed.swift in Sources */,
-				17F4C1411BC13CF9007A2AF6 /* Moody 2-Moody 3.xcmappingmodel in Sources */,
 				174D896C1BCE65CC00168E22 /* Mood.swift in Sources */,
 				17F4C1571BC2A7B0007A2AF6 /* Moody 3-Moody 4.xcmappingmodel in Sources */,
 				174F833E1BC3FF1A00B53393 /* Migration.swift in Sources */,
@@ -543,7 +543,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.objc.MigrationsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Migrations.app/Migrations";
 			};
 			name = Debug;
@@ -560,7 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.objc.MigrationsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Migrations.app/Migrations";
 			};
 			name = Release;
